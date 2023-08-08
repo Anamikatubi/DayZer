@@ -14,7 +14,6 @@ final void Function() startApp;
          Container(
           padding: const EdgeInsets.symmetric(horizontal: 150),
            child: const Text('To Simplify The Way You Work',
-                   // 'The Way You Work',
            style:TextStyle ( 
             color:Colors.black,
             fontSize: 50,

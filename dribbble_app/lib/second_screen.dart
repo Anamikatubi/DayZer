@@ -2,6 +2,7 @@ import 'package:dribbble_app/trial.dart';
 import 'package:flutter/material.dart';
 import 'package:dribbble_app/start_screen.dart';
 
+
 class SecondScreen extends StatefulWidget{
   const SecondScreen({super.key});
 
@@ -19,6 +20,8 @@ void initState(){
   super.initState();
 
 }
+
+
   
  void  switchScreen () {
     setState((){
