@@ -18,6 +18,7 @@ final void Function() startApp;
            style:TextStyle ( 
             color:Colors.black,
             fontSize: 50,
+            fontWeight: FontWeight.bold,
            ),
            textAlign: TextAlign.center,
            ),
@@ -28,14 +29,17 @@ final void Function() startApp;
            width:300,
          ),
          const SizedBox(height:20),
-         const Text('controling delivaries in reliable and no-hassle way',
+         Container(
+         padding: const EdgeInsets.symmetric(horizontal:10),
+        child: const Text('controling delivaries in reliable and no-hassle way',
           style:TextStyle(
           color:Color.fromARGB(255, 11, 11, 11),
           fontSize: 24,
-
+          
           ),
-    
+         
         ),
+         ),
         
         const SizedBox(height: 50),
         Container(
@@ -49,9 +53,10 @@ final void Function() startApp;
               foregroundColor: const Color.fromARGB(255, 255, 255, 255),
               backgroundColor:  Colors.black,
             ),
+            
             icon:const Icon(Icons.celebration),
             label:const Text('Get free Trial'),
-          
+           
           ),
         ), 
      ] ,
