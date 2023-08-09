@@ -3,11 +3,8 @@ import 'dart:html';
 import 'package:dribbble_app/list_page.dart';
 import 'package:flutter/material.dart';
 
-
 class Trial extends StatefulWidget {
   const Trial({super.key});
-
-
 
   @override
   State<Trial> createState() {
@@ -25,9 +22,25 @@ class _TrialState extends State<Trial> {
           SizedBox(
             child: Padding(
               padding: const EdgeInsets.all(23.0),
-              child: Image.asset(
-                'assets/images/smiley image.png',
-                width: 100,
+              child: Row(
+                children: [
+                  Image.asset(
+                    'assets/images/smiley image.png',
+                    width: 100,
+                  ),
+                  const SizedBox(height: 10),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: Text(
+                      'Hi, Smiley!',
+                      style: TextStyle(
+                        color: Color.fromARGB(153, 57, 55, 55),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
@@ -86,7 +99,7 @@ class _TrialState extends State<Trial> {
                       ))),
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 15),
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -110,7 +123,7 @@ class _TrialState extends State<Trial> {
               ),
             ],
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -262,54 +275,46 @@ class _TrialState extends State<Trial> {
               ),
             ],
           ),
-          const SizedBox(height:8),
+          const SizedBox(height: 8),
           const Row(
             children: [
               Padding(
-                padding:EdgeInsets.symmetric(horizontal:40),
-                child:Text(
+                padding: EdgeInsets.symmetric(horizontal: 40),
+                child: Text(
                   'New Capmain review',
-                  style:TextStyle(
-                    color:Color.fromARGB(240, 10, 9, 9),
-                    fontSize:20,
-                    fontWeight:FontWeight.bold,
+                  style: TextStyle(
+                    color: Color.fromARGB(240, 10, 9, 9),
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
                   ),
-                  ),
-
                 ),
-
-          ],
-          ),
-
-const SizedBox(height: 50),
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 30,),
-          width: double.infinity,
-          height: 40,
-          child: OutlinedButton.icon(
-            onPressed:() {
-           Navigator.push(context,
-           MaterialPageRoute(
-            builder: (
-              context) => const ListPage()
               ),
-              );
-            },
-            style:OutlinedButton.styleFrom(
-              foregroundColor: const Color.fromARGB(255, 255, 255, 255),
-              backgroundColor:  Colors.black,
-              
-            ),
-            
-            icon:const Icon(Icons.messenger),
-            label:const Text(' click'),
-           
+            ],
           ),
-        ), 
-
+          const SizedBox(height: 50),
+          Container(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 30,
+            ),
+            width: double.infinity,
+            height: 40,
+            child: OutlinedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ListPage()),
+                );
+              },
+              style: OutlinedButton.styleFrom(
+                foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+                backgroundColor: Colors.black,
+              ),
+              icon: const Icon(Icons.messenger),
+              label: const Text(' click'),
+            ),
+          ),
         ],
-         ),
-      );
-    
+      ),
+    );
   }
 }

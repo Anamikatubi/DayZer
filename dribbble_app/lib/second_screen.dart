@@ -21,8 +21,6 @@ void initState(){
 
 }
 
-
-  
  void  switchScreen () {
     setState((){
       activeScreen = const Trial();
